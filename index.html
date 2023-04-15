@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Husker Trivia Game</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class= "large-font">Husker Trivia Game</div>
+      <button class="start-button">Start</button>
+    </header>
+
+    <main>
+      <section>
+        <div class="card husker-guess">
+          <div class="medium-font word-blanks">How Well Do You Know the Huskers Championship History?</div>
+        <div class ="letter"></div>
+             <div id = "button-div" class = "hidden">
+              <button class="button1">1</button>
+              <button class="button2">2</button>
+              <button class="button3">3</button>
+              <button class="button4">4</button>
+             </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="card results">
+          <div class = "score-container">
+          <div class ="score">
+          <h2>Score <div class="score-button">0</div></h2>
+        </div>
+          <button class="reset-button">Reset Score</button>
+      </div>
+          <div class= "card timer">
+            <div class = "timer-text">
+            <div class="large-font timer-count">30</div>
+            <h3>seconds remaining</h3>
+          </div>
+        
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="assets/script.js"></script>
+  </body>
+</html>
