@@ -223,8 +223,13 @@ var resetButton = document.querySelector(".reset-button");
 
 function resetScore() {
   // Resets win and loss counts
-  if (scoreCounter <= 40);
-  function startGame();
+    timerCount = 30
+    console.log("You're a true Huskerfan!")
+  
+  clearInterval(timer);
+  scoreCounter = 0;
+  scoreButton.textContent = scoreCounter;
+  startGame ()
   // Renders win and loss counts and sets them into client storage
 
 }
