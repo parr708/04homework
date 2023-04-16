@@ -37,7 +37,7 @@ function startGame() {
 // The winGame function is called when the win condition is met
 function winGame() {
   wordBlank.textContent = "You are a true Husker Fan!!!🏆 ";
-  if (score = 40);
+  if (scoreCounter = 40);
   startButton.disabled = false;
   
 }
@@ -45,7 +45,7 @@ function winGame() {
 // The loseGame function is called when timer reaches 0
 function loseGame() {
   wordBlank.textContent = "You need to watch more Huskers!";
-  if (score <= 30);
+  if (scoreCounter <= 30);
   startButton.disabled = false;
   
 }
@@ -96,6 +96,7 @@ console.log("answer1 chosen", chosen)
 if (chosen === "A. 1962"){console.log("correct")} 
 else {console.log("incorrect")}
 getScore ()
+checkWin ()
 question2 ()
 }
 
@@ -118,7 +119,7 @@ function answer2 (event) {
   chosen = event.target.innerHTML
   if (chosen === "B. 1997"){console.log("correct")} 
   else {console.log("incorrect")}
-  getScore ()
+  
   question3 () 
   }
   
@@ -140,7 +141,7 @@ function answer2 (event) {
     chosen = event.target.innerHTML
     if (chosen === "C. 1970"){console.log("correct")} 
     else {console.log("incorrect")}
-    getScore ()
+    
     question4 ()
     }
 
@@ -162,8 +163,7 @@ function answer2 (event) {
       chosen = event.target.innerHTML
       if (chosen === "B. 1999"){console.log("correct")} 
       else {console.log("incorrect")}
-      getScore ()
-      
+           
       }
 
   function getScore() {
@@ -174,13 +174,14 @@ function answer2 (event) {
 
     console.log("chosen", chosen)
     if (chosen === "B. 1997") {
-      scoreCounter = + 10;
+      scoreCounter = scoreCounter + 10;
     }
     
+    console.log("chosen", chosen)
     if (chosen === "C. 1970") {
       scoreCounter = scoreCounter + 10;
     }
-
+    console.log("chosen", chosen)
     if (chosen === "B. 1999") {
       scoreCounter = scoreCounter + 10;
     }
@@ -193,9 +194,10 @@ function answer2 (event) {
 
 function checkWin() {
   // If the word equals the blankLetters array when converted to string, set isWin to true
-  if (chosenLetter === scoreCounter) {
+  if (scoreCounter === 40) {
     // This value is used in the timer function to test if win condition is met
     isWin = true;
+    console.log("win")
   }
 }
 
@@ -219,13 +221,12 @@ startButton.addEventListener("click", startGame);
 // Bonus: Add reset button
 var resetButton = document.querySelector(".reset-button");
 
-function resetGame() {
+function resetScore() {
   // Resets win and loss counts
-  winCounter = 0;
-  loseCounter = 0;
+  scoreCounter = 0;
+  
   // Renders win and loss counts and sets them into client storage
-  setWins()
-  setLosses()
+
 }
 // Attaches event listener to button
-resetButton.addEventListener("click", resetGame);
+resetButton.addEventListener("click", resetScore);
