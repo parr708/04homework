@@ -223,8 +223,8 @@ var resetButton = document.querySelector(".reset-button");
 
 function resetScore() {
   // Resets win and loss counts
-  scoreCounter = 0;
-  
+  if (scoreCounter <= 40);
+  function startGame();
   // Renders win and loss counts and sets them into client storage
 
 }
